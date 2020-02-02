@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ place?.name }}</mat-card-title>
+    <mat-card-subtitle>{{ place?.address }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong>Opening Hours</strong>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <dl>
+        <ng-container *ngFor="let scheduleInterval of place?.openingHours | weekSchedule">
+          <dt>{{ scheduleInterval.period }}</dt>
+          <dd *ngIf="scheduleInterval.intervals.length === 0">
+            <span>closed</span>
+          </dd>
+          <dd *ngFor="let interval of scheduleInterval.intervals">{{ interval.from }} - {{ interval.to }}</dd>
+        </ng-container>
+      </dl>
+    </mat-expansion-panel>
+  </mat-card-content>
+</mat-card>

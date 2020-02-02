@@ -1,0 +1,32 @@
+dl {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 300px;
+
+  margin: 0;
+
+  dt, dd {
+    width: 50%;
+    margin: 0;
+    padding-top: 1em;
+    white-space: nowrap;
+  }
+
+  dd {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  dd + dd {
+    width: 100%;
+    padding-top: 0;
+
+    &:before {
+      content: '';
+      width: 50%;
+      padding-top: 0
+    }
+  }
+}
