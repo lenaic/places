@@ -6,7 +6,7 @@ This project requires a local installation of npm. Install NodeJS (v10 or later)
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. The interaction with the places service is configured throught the `proxy-config.json` file which will redirect the api requests to `http://localhost:8080`.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. The interaction with the places service is configured through the `proxy-config.json` file which will redirect all api requests to `http://localhost:8080`.
 
 ## Build
 
