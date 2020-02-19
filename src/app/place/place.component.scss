@@ -30,3 +30,24 @@ dl {
     }
   }
 }
+
+:ng-deep .mat-card-header-text {
+  width: 100%;
+}
+
+mat-card-title {
+  width: 100%;
+  justify-content: space-between;
+}
+
+span {
+  font-weight: bold;
+
+  &.open {
+    color: green;
+  }
+
+  &.closed {
+    color: red;
+  }
+}
