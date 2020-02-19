@@ -13,6 +13,7 @@ export interface Place {
   name: string;
   address: string;
   open: boolean;
+  nextOpeningDateTime: string;
   openingHours: WeekDayInterval[];
 }
 
